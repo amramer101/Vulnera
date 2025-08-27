@@ -20,7 +20,32 @@ Vulnera is a fast, scalable, multi-ecosystem vulnerability analysis toolkit and 
 - **Container Ready:** Docker and Kubernetes support for production deployments
 - **Developer Friendly:** Comprehensive tooling, linting, and CI/CD integration
 
+
 ---
+
+## 🌐 Azure Cloud Architecture
+
+![Azure Architecture](./docs/Azure_Arch.png)
+
+**Summary:**
+Vulnera is designed for cloud-native deployment on Microsoft Azure.
+
+- Edge: Azure Front Door for global entry, TLS, and WAF
+- Identity: Entra Managed Identities for workload identity (no secrets in code)
+- API Gateway: Azure API Management for routing, throttling, policies, and versioning
+- Compute: Azure App Service or Azure Container Apps for running the Rust API
+- Images: Azure Container Registry (ACR) for container images
+- Secrets: Azure Key Vault for API keys and configuration
+- Observability: Application Insights + Azure Monitor dashboards and logs
+- CI/CD: GitHub Actions builds the app and container, pushes to ACR, and deploys to App Service/Container Apps; APIM can be updated as part of the pipeline
+
+This architecture provides global reach, strong identity and secret management, and first-class observability while keeping operations streamlined.
+
+---
+
+
+
+
 
 ## ⚡ Quick Start
 
@@ -260,27 +285,6 @@ Please read `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md` before opening PRs. We we
 - **Scalability:** Rust’s async and concurrency model scales to thousands of requests with minimal resources.
 - **Ecosystem:** Rust’s package ecosystem (crates.io) and tooling (cargo, clippy, rustfmt) support modern development practices.
 
----
-
-## 🌐 Azure Cloud Architecture
-
-![Azure Architecture](./docs/Azure_Arch.png)
-
-**Summary:**
-Vulnera is designed for cloud-native deployment on Microsoft Azure.
-
-- Edge: Azure Front Door for global entry, TLS, and WAF
-- Identity: Entra Managed Identities for workload identity (no secrets in code)
-- API Gateway: Azure API Management for routing, throttling, policies, and versioning
-- Compute: Azure App Service or Azure Container Apps for running the Rust API
-- Images: Azure Container Registry (ACR) for container images
-- Secrets: Azure Key Vault for API keys and configuration
-- Observability: Application Insights + Azure Monitor dashboards and logs
-- CI/CD: GitHub Actions builds the app and container, pushes to ACR, and deploys to App Service/Container Apps; APIM can be updated as part of the pipeline
-
-This architecture provides global reach, strong identity and secret management, and first-class observability while keeping operations streamlined.
-
----
 
 ## 👥 Team
 
