@@ -1,6 +1,5 @@
 # Vulnera Rust – High-Performance Vulnerability Analysis API
 
-[![CI](https://github.com/k5602/Vulnera/actions/workflows/main-azure-web.yml/badge.svg?branch=main)](https://github.com/k5602/Vulnera/actions/workflows/main-azure-web.yml)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE)
 [![MSRV](https://img.shields.io/badge/MSRV-1.82%2B-orange.svg)](https://www.rust-lang.org/tools/install)
 
